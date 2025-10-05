@@ -10,11 +10,37 @@
 
 html {
     font-size: 62.5%;
-    6
+
 }
 
 
 /* =========================common======================================= */
+.heading-lv2 {
+    font-family: var(--font-h1);
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 38px;
+
+    line-height: 48px;
+    letter-spacing: -2%;
+
+}
+
+/* ======================== TỐI ƯU HÓA TIÊU ĐỀ ============================================== */
+
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
 
 .main-content {
     width: 1170px;
@@ -58,6 +84,13 @@ body {
 .header.fixed {
     position: sticky;
     top: -28px;
+    z-index: 1;
+}
+
+.header.fixed img {
+    height: 40px;
+
+    object-fit: cover;
 }
 
 
@@ -262,7 +295,7 @@ a {
 
 
 .btn-see-courses {
-    bo display: block;
+    display: block;
     line-height: 50px;
     min-width: 150px;
     font-size: 1.6rem;
@@ -300,20 +333,321 @@ a {
 
 }
 
-.hero .thongso {
+.hero .more {
     display: flex;
 
 }
 
 .hero strong {
     color: #000;
+    margin-right: 15px;
+    font-family: var(--font-h1);
     font-weight: 700;
     font-size: 4.4rem;
     line-height: 5.4rem;
     font-style: bold;
 }
 
-.thongso :first-child {
-    margin-right: 20px;
+.hero .strong2 {
+    margin-left: 28px;
+}
+
+/* ===========popular================================================================= */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.popular-top .paragrap {
+    margin-top: 26px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    color: #5F5B53;
+    line-height: 30px;
+    letter-spacing: 0%;
+
+}
+
+.popular-top .control img {
+    height: 70px;
+}
+
+.popular-top .right {
+    rotate: 180deg;
+}
+
+
+
+.popular-top .control {
+    display: flex;
+    justify-items: center;
+    background: transparent;
+    align-items: center;
+    border-radius: 50%;
+    gap: 18px;
+
+    margin-left: 100px;
+}
+
+
+.popular .popular-top .control :hover {
+    cursor: pointer;
+    background: #FFB900;
+    color: white;
+    border-radius: 50%;
+}
+
+.popular .popular-body {
+    flex: 1;
+    gap: 30px;
+    margin-top: 55px;
+    display: flex;
+}
+
+
+.popular .body-item {
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 18px 36px 0px hsla(0, 0%, 0%, 0.5);
+
+}
+
+.popular .popular-body .thumb {
+    width: 100%;
+    object-fit: over;
+    height: 278px;
+    opacity: 1;
+    border-radius: 15px;
+
+}
+
+.popular .popular-body .info {
+    padding: 16px 22px 22px;
+}
+
+.popular .head .rating,
+.popular .head,
+.footer {
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.popular .popular-body .decs {
+    margin-top: 22px;
+}
+
+.popular .popular-body .title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 18px;
+
+    line-height: 30px;
+    letter-spacing: 0%;
+}
+
+.popular .popular-body .price {
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 18px;
+
+    line-height: 30px;
+    letter-spacing: 0%;
+
+}
+
+.popular .popular-body .footer {
+    margin-top: 12px;
+}
+
+.popular .popular-body .value {
+    color: var(--color-button);
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+
+}
+
+
+.popular .popular-body .btn:hover {
+    background: var(--color-button);
+    border-color: var(--color-button);
+
+}
+
+/* ============================= Feeback =========================================================== */
+.feedback {
+    margin-top: 135px;
+    background-color: #2E2100;
+    padding: 96px 0px;
+}
+
+.feedback .feedback-list .feeback-item {
+
+    color: white;
+
+}
+
+.feedback .info .avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+
+
+}
+
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.feeback-item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+
+}
+
+
+
+.feedback .feedback-list .name {
+    font-family: var(--font-h1);
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 2.4rem;
+    line-height: 34px;
+    margin-top: 18px;
+}
+
+.feedback .feedback-list .decs {
+    margin-top: 4px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+
+}
+
+.feedback .feedback-list .dots {
+    display: flex;
+    gap: 6px;
+
+}
+
+.feedback-list .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+}
+
+.feedback-list .dot.active {
+    background: #FFB900;
+}
+
+.feedback-list .content {
+    width: 60%;
+    margin-left: auto;
+}
+
+.feedback-list .comment {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 26px;
+    line-height: 40px;
+    letter-spacing: 0%;
+    color: white;
+
+}
+
+.feedback-list .info img:hover {
+    scale: 1.2;
+
+
+
+}
+
+/* =================== features =================== */
+.features {
+    padding: 65px 0px;
+    margin-top: 135px;
+}
+
+.features .body {
+    justify-content: space-between;
+    display: flex;
+}
+
+.features .images img {
+    object-fit: cover;
+    width: 270px;
+    height: 404px;
+    opacity: 1;
+    border-radius: 16px;
+    gap: 30px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 18px 36px 0px hsla(0, 0%, 0%, 0.5);
+}
+
+
+.features .images {
+    gap: 30px;
+    display: flex;
+
+}
+
+.features .lower {
+    margin-top: 34px;
+
+}
+
+
+.features .content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.features .decs {
+    margin-top: 16px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 1.6rem;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #5F5B53;
+
+}
+
+.features .cta-btn {
+    width: 137px;
+    margin-top: 21px;
+    height: 50px;
+    background: var(--color-button);
+    opacity: 1;
+    border-radius: 26px;
+    border-color: var(--color-button);
+
 
 }
